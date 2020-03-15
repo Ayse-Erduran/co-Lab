@@ -1,0 +1,64 @@
+#navbar-container{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+#title-container > h1 {
+  font-family: Georgia
+}
+
+#start-room-container{
+  margin-left: 800px;
+}
+
+#blue-button{
+  background-color: #37AAE8;
+  border-radius: 5px;
+  color: white;
+  height: 50px;
+  width: 120px;
+  font-size: 16px;
+  font-family: Georgia;
+}
+
+#create-room-form{
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  justify-content: center;
+  margin-left: 25em;
+}
+
+#create-room-form > label{
+  margin: 10pz
+}
+
+#create-room-form > input{
+  margin: 5px
+}
+
+#codeRoom-outer-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#ace-options-container{
+  display: flex;
+}
+
+
+/* #canvas-outer-container{
+  display: flex;
+}
+
+
+#color-picker{
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 400px;
+  border:2px solid black;
+} */
