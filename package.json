@@ -1,5 +1,5 @@
 {
-  "name": "co-lab",
+  "name": "colabapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
     "brace": "^0.11.1",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
     "react": "^16.13.0",
     "react-ace": "^8.0.0",
     "react-dom": "^16.13.0",
@@ -20,11 +21,17 @@
   "devDependencies": {
     "@babel/polyfill": "^7.8.7",
     "babel-loader": "^8.0.6",
-    "webpack": "^4.16.4",
-    "webpack-cli": "^3.1.0"
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "start": "webpack -w & nodemon server"
+    "start": "node server",
+    "start-dev": "npm run build-client-watch & npm run start-server",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
+    "build-client": "webpack",
+    "build-client-watch": "webpack -w",
+    "deploy": "script/deploy",
+    "heroku-token": "script/encrypt-heroku-auth-token.js"
   },
   "author": "",
   "license": "ISC"
