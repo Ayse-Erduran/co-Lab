@@ -6,8 +6,17 @@ class Navbar extends React.Component{
   constructor(){
     super()
     this.state = {
-      create: false
+      created: false
     }
+    this.createRoom = this.createRoom.bind(this)
+  }
+
+  createRoom(){
+    this.state.created ? window.open('/create', '_blank'):
+    this.setState({
+      created: true
+    })
+
   }
 
   render(){
@@ -17,7 +26,9 @@ class Navbar extends React.Component{
           <h1>co-Lab</h1>
         </div>
         <div id="start-room-container">
-          <Link to="/create"><button id="blue-button">+ start a room</button></Link>
+          {!this.state.created &&
+          <Link to="/create"><button id="blue-button" onClick={this.createRoom}>+ start a room</button></Link>}
+          {this.state.created && <button id="blue-button" onClick={this.createRoom}>+ start a room</button>}
         </div>
       </div>
     )

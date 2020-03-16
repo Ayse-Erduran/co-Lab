@@ -21,6 +21,10 @@ module.exports = (io) => {
       //io.to(room).emit('code', newValue)
     })
 
+    socket.on('clear', (room) => {
+      io.in(room).emit('clear')
+    })
+
     socket.on('disconnect', () => {
       console.log(`Connection ${socket.id} has left the room`)
     })

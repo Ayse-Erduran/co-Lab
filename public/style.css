@@ -50,7 +50,7 @@
 }
 
 
-/* #canvas-outer-container{
+#canvas-outer-container{
   display: flex;
 }
 
@@ -58,7 +58,27 @@
 #color-picker{
   display: flex;
   flex-direction: column;
-  width: 100px;
-  height: 400px;
+  width: 70px;
+  height: 140px;
+  justify-content: space-around;
   border:2px solid black;
-} */
+}
+
+#color-opt{
+  height: 20px;
+  border-radius: 5%;
+}
+
+
+#dropzone{
+  position:absolute;
+  top: 50%;
+  left:50%;
+  z-index: 2;
+  border: 2px solid grey;
+  background-color: lightgrey;
+}
+
+#room {
+  display: flex
+}

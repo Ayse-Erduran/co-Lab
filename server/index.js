@@ -14,6 +14,12 @@ app.use(morgan('dev'))
 //static file-serving mw
 app.use(express.static(path.join(__dirname, '..', '/public')))
 
+// sends index.html
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+})
+
+
 const server = app.listen(PORT, () => {
   console.log(`listening on: http://localhost:${PORT}`)
 })
